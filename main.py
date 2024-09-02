@@ -148,7 +148,7 @@ for col in num_cols:
 # Target variable analysis
 
 def target_summary_with_cat(dataframe, target, categorical_col):
-    print(pd.DataFrame({"Target_Mean": dataframe.groupby(categorical_col, observed=False)[target].value_counts()}), end="\n\n\n")
+    print(pd.DataFrame({"Target_Count": dataframe.groupby(categorical_col, observed=False)[target].value_counts()}), end="\n\n\n")
 
 
 def target_summary_with_num(dataframe, target, numerical_col):
